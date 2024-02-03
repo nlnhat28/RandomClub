@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{449728D9-58E9-442F-82CE-6C02EBB00C33}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RANDOM_CLUB</RootNamespace>
+    <AssemblyName>RANDOM CLUB</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>RANDOM-CLUB.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Drawing.cs" />
+    <Compile Include="fExportResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fExportResult.Designer.cs">
+      <DependentUpon>fExportResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fFinalResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fFinalResult.Designer.cs">
+      <DependentUpon>fFinalResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fGroups.Designer.cs">
+      <DependentUpon>fGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMode.Designer.cs">
+      <DependentUpon>fMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fExport.Designer.cs">
+      <DependentUpon>fExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMain.Designer.cs">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fResult.Designer.cs">
+      <DependentUpon>fResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fPots.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fPots.Designer.cs">
+      <DependentUpon>fPots.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Groups.cs" />
+    <Compile Include="Link.cs" />
+    <Compile Include="OrderType.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RANDOM_CLUB\Properties\Resources.cs" />
+    <Compile Include="TeamsInGroupsMode.cs" />
+    <Compile Include="ucAGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAGroup.Designer.cs">
+      <DependentUpon>ucAGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucATeam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucATeam.Designer.cs">
+      <DependentUpon>ucATeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucATeamInAGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucATeamInAGroup.Designer.cs">
+      <DependentUpon>ucATeamInAGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucATeamInDrawing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucATeamInDrawing.Designer.cs">
+      <DependentUpon>ucATeamInDrawing.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="fExportResult.resx">
+      <DependentUpon>fExportResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fFinalResult.resx">
+      <DependentUpon>fFinalResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fGroups.resx">
+      <DependentUpon>fGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMode.resx">
+      <DependentUpon>fMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fExport.resx">
+      <DependentUpon>fExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMain.resx">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fResult.resx">
+      <DependentUpon>fResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fPots.resx">
+      <DependentUpon>fPots.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAGroup.resx">
+      <DependentUpon>ucAGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucATeam.resx">
+      <DependentUpon>ucATeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucATeamInAGroup.resx">
+      <DependentUpon>ucATeamInAGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucATeamInDrawing.resx">
+      <DependentUpon>ucATeamInDrawing.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning-icon.png" />
+    <None Include="Design\box game.png" />
+    <None Include="Design\box game-01.png" />
+    <None Include="bin\Debug\Resources\Border.png" />
+    <None Include="Design\Border-01.png" />
+    <None Include="Design\Border-01 sd.png" />
+    <None Include="Resources\3656686.jpg" />
+    <None Include="Design\delete.png" />
+    <Content Include="RANDOM-CLUB.ico" />
+    <None Include="Resources\36566861.jpg" />
+    <Content Include="Resources\AFC Ajax.png" />
+    <None Include="Resources\arrow_down_circle_icon-icons.com_66700.png" />
+    <None Include="Resources\arrow_right_drop_circle_outline_icon_139946.png" />
+    <None Include="Resources\arrow_left_bold_circle_icon_138922.png" />
+    <None Include="Resources\arrow_right_bold_circle_icon_136936.png" />
+    <Content Include="Resources\Arsenal.png" />
+    <Content Include="Resources\AS Monaco.png" />
+    <Content Include="Resources\AS Roma.png" />
+    <Content Include="Resources\Atlético Madrid.png" />
+    <Content Include="Resources\Bayern Leverkusen.png" />
+    <Content Include="Resources\Bayern München.png" />
+    <Content Include="Resources\Borussia Dortmund.png" />
+    <None Include="Resources\Bulb.png" />
+    <Content Include="Resources\Celtic FC.png" />
+    <Content Include="Resources\Chelsea.png" />
+    <Content Include="Resources\Club Brugge.png" />
+    <Content Include="Resources\CSKA Moskva.png" />
+    <None Include="Resources\export_icon_137651.png" />
+    <None Include="Resources\delete_4219.png" />
+    <None Include="Resources\export icon.png" />
+    <None Include="Resources\export as icon.png" />
+    <None Include="Resources\eraser icon.png" />
+    <None Include="Resources\drop arrow.png" />
+    <None Include="Resources\drop arrow1.png" />
+    <None Include="Resources\dice_six_icon_172507.png" />
+    <None Include="Resources\dice_six_icon_175239.png" />
+    <None Include="Resources\dice_six_icon_1725071.png" />
+    <None Include="Resources\drop arrow2.png" />
+    <None Include="Resources\dice_six_icon_1725072.png" />
+    <Content Include="Resources\FC Barcelona.png" />
+    <Content Include="Resources\FC Porto.png" />
+    <Content Include="Resources\FC Salzburg.png" />
+    <Content Include="Resources\FC Zenit.png" />
+    <None Include="Resources\Groups icon-02.png" />
+    <None Include="Resources\game_dice_six_icon_158554.png" />
+    <None Include="Resources\full-screen-on_icon-icons.com_58121.png" />
+    <Content Include="Resources\HD HUST FC.jpg" />
+    <None Include="Resources\import_icon_136483.png" />
+    <None Include="Resources\import icon.png" />
+    <None Include="Resources\Hourglass.png" />
+    <Content Include="Resources\Inter Milano.png" />
+    <Content Include="Resources\Juventus.png" />
+    <None Include="Resources\KO icon-01.png" />
+    <Content Include="Resources\Lazio.png" />
+    <None Include="Resources\leftarrow2_120648.png" />
+    <Content Include="Resources\Liverpool.png" />
+    <Content Include="Resources\Manchester City.png" />
+    <Content Include="Resources\Manchester United.png" />
+    <None Include="Resources\minimize_window_icon_175768.png" />
+    <Content Include="Resources\Olympique Lyonnais.png" />
+    <Content Include="Resources\Paris Saint-Germain.png" />
+    <Content Include="Resources\PSV Eindhoven.png" />
+    <Content Include="Resources\Python Super League 2.1-01.png" />
+    <None Include="Resources\RANDOM CLUB1.png" />
+    <None Include="Resources\RANDOM CLUB.png" />
+    <None Include="Resources\random 2 icon.png" />
+    <None Include="Resources\random 2 icon1.png" />
+    <Content Include="Resources\RB Leipzig.png" />
+    <Content Include="Resources\Real Madrid.png" />
+    <None Include="Resources\serial.png" />
+    <None Include="Resources\rightarrow2_120620.png" />
+    <Content Include="Resources\Sevilla FC.png" />
+    <Content Include="Resources\Shakhtar Donetsk.png" />
+    <None Include="Resources\shrink_content_minimize_icon_149383.png" />
+    <Content Include="Resources\SL Benfica.png" />
+    <Content Include="Resources\Sporting CP.png" />
+    <Content Include="Resources\SSC Napoli.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
